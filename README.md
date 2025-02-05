@@ -23,3 +23,11 @@ The purpose is for the h1 to change based on what the input is.
 
 {@render children()}
 ```
+
+## Installation
+Follow these steps:
+```c
+git clone
+npm install
+npm run dev
+```
