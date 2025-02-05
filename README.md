@@ -1,38 +1,25 @@
-# sv
+# My Project
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## The elements
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+The project consists of a header , footer , h1 and input field.
+```html
+<div>
+    <h1>{greeting}</h1>
+    <h2>What do you want to write?</h2>
+    <input type = "text" bind:value={greeting}>
+    </div>
 ```
 
-## Developing
+## The purpose of the project
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+The purpose is for the h1 to change based on what the input is.
 
-```bash
-npm run dev
+```javascript
+<script>
+	import '../app.css'; // Creates a connection to app.css
+	let { children } = $props(); // Props means properties
+</script>
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+{@render children()}
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
